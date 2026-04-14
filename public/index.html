@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction Management</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel">
+        <h1>Transaction Management</h1>
+        <p class="intro">Record transactions and track each account balance.</p>
+
+        <form id="transaction-form" class="transaction-form">
+          <label>
+            Account ID
+            <input data-type="account-id" id="account-id" name="account-id" type="text" required />
+          </label>
+
+          <label>
+            Amount
+            <input data-type="amount" id="amount" name="amount" type="number" required />
+          </label>
+
+          <input data-type="transaction-submit" type="submit" value="Submit" />
+        </form>
+
+        <p id="error-message" class="error-message" hidden></p>
+      </section>
+
+      <section class="panel">
+        <h2>Transactions</h2>
+        <div id="transactions" class="transactions"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
